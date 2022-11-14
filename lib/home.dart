@@ -5,6 +5,7 @@ import 'package:ui/pie.dart';
 
 import 'bar.dart';
 import 'curve.dart';
+import 'line.dart';
 import 'new.dart';
 
 class Home extends StatefulWidget {
@@ -543,7 +544,7 @@ class _Home extends State<Home> {
                                                       backgroundColor: Colors
                                                           .indigo.shade200,
                                                       barRadius:
-                                                          Radius.circular(20)),
+                                                          const Radius.circular(20)),
                                                   SizedBox(
                                                     height:
                                                         MediaQuery.of(context)
@@ -559,7 +560,7 @@ class _Home extends State<Home> {
                                                       backgroundColor: Colors
                                                           .orange.shade200,
                                                       barRadius:
-                                                          Radius.circular(20)),
+                                                          const Radius.circular(20)),
                                                   SizedBox(
                                                     height:
                                                         MediaQuery.of(context)
@@ -575,7 +576,7 @@ class _Home extends State<Home> {
                                                       backgroundColor: Colors
                                                           .indigo.shade200,
                                                       barRadius:
-                                                          Radius.circular(20)),
+                                                          const Radius.circular(20)),
                                                 ],
                                               ),
                                             )
@@ -660,12 +661,14 @@ class _Home extends State<Home> {
                                               height: MediaQuery.of(context)
                                                       .size
                                                       .height /
-                                                  35,
+                                                  50,
                                             ),
+
+
                                             Container(
                                               child: CircularPercentIndicator(
-                                                radius: 100,
-                                                lineWidth: 20,
+                                                radius: 70,
+                                                lineWidth: 15,
                                                 percent: 0.75,
                                                 progressColor: Colors.indigo,
                                                 backgroundColor:
@@ -677,12 +680,63 @@ class _Home extends State<Home> {
                                                   style: TextStyle(
                                                       color: Colors
                                                           .indigo.shade200,
-                                                      fontSize: 50,
+                                                      fontSize: 30,
                                                       fontWeight:
                                                           FontWeight.w400),
                                                 ),
                                               ),
-                                            )
+
+                                            ),
+                                            SizedBox(
+                                              height: MediaQuery.of(context)
+                                                  .size
+                                                  .height /
+                                                  75,
+                                            ),
+                                            Text(
+                                              "Duis autem vel eum iriure",
+                                              style: TextStyle(
+                                                  color: Colors
+                                                      .indigo.shade200,
+                                                  fontSize: 15,
+                                                  fontWeight:
+                                                  FontWeight.w200),
+                                            ),
+
+                                            SizedBox(
+                                              height: MediaQuery.of(context)
+                                                  .size
+                                                  .height /
+                                                  75,
+                                            ),
+                                            Container(
+                                              height:
+                                              MediaQuery.of(context).size.height / 20,
+                                              width:
+                                              MediaQuery.of(context).size.width / 10,
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(40.0),
+                                                color: Colors.indigo,
+                                                boxShadow: const [
+                                                  BoxShadow(
+                                                    color: Colors.grey,
+                                                    offset: Offset(0.0, 1.0), //(x,y)
+                                                    blurRadius: 6.0,
+                                                  ),
+                                                ],
+                                              ),
+                                              child: const Center(
+                                                child: Text(
+                                                  "Subcipit",
+                                                  style: TextStyle(
+                                                      color: Colors
+                                                          .white,
+                                                      fontSize: 15,
+                                                      fontWeight:
+                                                      FontWeight.w200),
+                                                ),
+                                              ),
+                                            ),
                                           ],
                                         ),
                                       ),
@@ -716,6 +770,7 @@ class _Home extends State<Home> {
                                     ),
                                   ],
                                 ),
+                                child: const BarChartSample2(),
                               ),
                               SizedBox(
                                 width: MediaQuery.of(context).size.width / 50,
@@ -898,7 +953,7 @@ class _Home extends State<Home> {
                                   height:
                                       MediaQuery.of(context).size.height / 50,
                                 ),
-                                ScatterChartSample1()
+                                const ScatterChartSample1()
                               ],
                             ),
                           ),
@@ -957,7 +1012,7 @@ class _Home extends State<Home> {
                                       percent: 0.3,
                                       progressColor: Colors.indigo,
                                       backgroundColor: Colors.indigo.shade200,
-                                      barRadius: Radius.circular(20),
+                                      barRadius: const Radius.circular(20),
                                     ),
                                   ],
                                 ),
