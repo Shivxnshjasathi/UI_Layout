@@ -82,8 +82,6 @@ class _CalendarState extends State<Calendar> {
               ),
               weekendDecoration: BoxDecoration(
                 shape: BoxShape.rectangle,
-
-
                 borderRadius: BorderRadius.circular(20.0),
               ),
             ),
@@ -101,7 +99,7 @@ class _CalendarState extends State<Calendar> {
             ),
           ),
           ..._getEventsfromDay(selectedDay).map(
-                (Event event) => ListTile(
+            (Event event) => ListTile(
               title: Text(
                 event.title,
               ),
@@ -109,7 +107,6 @@ class _CalendarState extends State<Calendar> {
           ),
         ],
       ),
-
     );
   }
 }
