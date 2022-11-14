@@ -79,7 +79,7 @@ class PieChart2State extends State {
           );
         case 1:
           return PieChartSectionData(
-            color: Colors.indigo.shade200,
+            color: Colors.orange,
             value: 30,
             title: '30%',
             radius: radius,

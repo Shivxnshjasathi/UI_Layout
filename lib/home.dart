@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:ui/pie.dart';
 
 import 'bar.dart';
+import 'curve.dart';
 import 'new.dart';
 
 class Home extends StatefulWidget {
@@ -122,7 +125,7 @@ class _Home extends State<Home> {
                                                 5.3,
                                             decoration: BoxDecoration(
                                               borderRadius:
-                                                  BorderRadius.circular(40.0),
+                                                  BorderRadius.circular(20.0),
                                               color: Colors.white,
                                               boxShadow: const [
                                                 BoxShadow(
@@ -217,87 +220,105 @@ class _Home extends State<Home> {
                                                     ],
                                                   ),
                                                 ),
-                                                Container(
-                                                  child: Padding(
-                                                    padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 2),
-                                                    child: Center(
-                                                      child: Column(
-                                                        children: [
-                                                          SizedBox(height: MediaQuery.of(context)
-                                                              .size
-                                                              .height /
-                                                              100,),
-                                                          Container(
-                                                            child: Row(
-                                                              children: const [
-                                                                Icon(
-                                                                    Icons
-                                                                        .arrow_upward_rounded,
-                                                                    size: 40,
-                                                                    color: Colors
-                                                                        .indigo),
-                                                                Text(
-                                                                  "1974",
-                                                                  style: TextStyle(
+                                                Padding(
+                                                  padding: const EdgeInsets
+                                                          .symmetric(
+                                                      horizontal: 20.0,
+                                                      vertical: 2),
+                                                  child: Center(
+                                                    child: Column(
+                                                      children: [
+                                                        SizedBox(
+                                                          height: MediaQuery.of(
+                                                                      context)
+                                                                  .size
+                                                                  .height /
+                                                              100,
+                                                        ),
+                                                        Container(
+                                                          child: Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .center,
+                                                            children: const [
+                                                              Icon(
+                                                                  Icons
+                                                                      .arrow_upward_rounded,
+                                                                  size: 40,
+                                                                  color: Colors
+                                                                      .indigo),
+                                                              Text(
+                                                                "1974",
+                                                                style: TextStyle(
                                                                     color: Colors
                                                                         .black,
-                                                                    fontSize: 30,
-                                                                    fontWeight: FontWeight.w400
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                          Container(
-                                                            child:  Text(
-                                                              "Dolor sit amet, consectetuer adipiscing elit",
-                                                              style: TextStyle(
-                                                                  color: Colors
-                                                                      .indigo.shade200,
-                                                                  fontSize: 15,
-                                                                  fontWeight: FontWeight.w200
+                                                                    fontSize:
+                                                                        30,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400),
                                                               ),
-                                                            ),
+                                                            ],
                                                           ),
-                                                          SizedBox(height: MediaQuery.of(context)
-                                                              .size
-                                                              .height /
-                                                              100,),
-                                                          Container(
-                                                            child: Row(
-                                                              children:  const [
-                                                                Icon(
-                                                                    Icons
-                                                                        .arrow_downward_rounded,
-                                                                    size: 40,
+                                                        ),
+                                                        Text(
+                                                          "Dolor sit amet, consectetuer adipiscing elit",
+                                                          style: TextStyle(
+                                                              color: Colors
+                                                                  .indigo
+                                                                  .shade200,
+                                                              fontSize: 15,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w200),
+                                                        ),
+                                                        SizedBox(
+                                                          height: MediaQuery.of(
+                                                                      context)
+                                                                  .size
+                                                                  .height /
+                                                              100,
+                                                        ),
+                                                        Container(
+                                                          child: Row(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .center,
+                                                            children: const [
+                                                              Icon(
+                                                                  Icons
+                                                                      .arrow_downward_rounded,
+                                                                  size: 40,
+                                                                  color: Colors
+                                                                      .orange),
+                                                              Text(
+                                                                "287",
+                                                                style: TextStyle(
                                                                     color: Colors
-                                                                        .orange),
-                                                                Text(
-                                                                  "287",
-                                                                  style: TextStyle(
-                                                                      color: Colors
-                                                                          .black,
-                                                                      fontSize: 30,
-                                                                      fontWeight: FontWeight.w400
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                          Container(
-                                                            child:  Text(
-                                                              "Dolor sit amet, consectetuer adipiscing elit",
-                                                              style: TextStyle(
-                                                                  color: Colors
-                                                                      .indigo.shade200,
-                                                                  fontSize: 15,
-                                                                  fontWeight: FontWeight.w200
+                                                                        .black,
+                                                                    fontSize:
+                                                                        30,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w400),
                                                               ),
-                                                            ),
+                                                            ],
                                                           ),
-
-                                                        ],
-                                                      ),
+                                                        ),
+                                                        Container(
+                                                          child: Text(
+                                                            "Dolor sit amet, consectetuer adipiscing elit",
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .indigo
+                                                                    .shade200,
+                                                                fontSize: 15,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w200),
+                                                          ),
+                                                        ),
+                                                      ],
                                                     ),
                                                   ),
                                                 ),
@@ -311,28 +332,28 @@ class _Home extends State<Home> {
                                                 50,
                                           ),
                                           Container(
-                                            height: MediaQuery.of(context)
-                                                    .size
-                                                    .height /
-                                                3,
-                                            width: MediaQuery.of(context)
-                                                    .size
-                                                    .width /
-                                                5.3,
-                                            decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(40.0),
-                                              color: Colors.white,
-                                              boxShadow: const [
-                                                BoxShadow(
-                                                  color: Colors.grey,
-                                                  offset:
-                                                      Offset(0.0, 1.0), //(x,y)
-                                                  blurRadius: 6.0,
-                                                ),
-                                              ],
-                                            ),
-                                          ),
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height /
+                                                  3,
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width /
+                                                  5.3,
+                                              decoration: BoxDecoration(
+                                                borderRadius:
+                                                    BorderRadius.circular(20.0),
+                                                color: Colors.white,
+                                                boxShadow: const [
+                                                  BoxShadow(
+                                                    color: Colors.grey,
+                                                    offset: Offset(
+                                                        0.0, 1.0), //(x,y)
+                                                    blurRadius: 6.0,
+                                                  ),
+                                                ],
+                                              ),
+                                              child: Container())
                                         ],
                                       ),
                                     ),
@@ -349,7 +370,7 @@ class _Home extends State<Home> {
                                           2.5,
                                       decoration: BoxDecoration(
                                         borderRadius:
-                                            BorderRadius.circular(40.0),
+                                            BorderRadius.circular(20.0),
                                         color: Colors.white,
                                         boxShadow: const [
                                           BoxShadow(
@@ -467,7 +488,7 @@ class _Home extends State<Home> {
                                           4.5,
                                       decoration: BoxDecoration(
                                         borderRadius:
-                                            BorderRadius.circular(40.0),
+                                            BorderRadius.circular(20.0),
                                         color: Colors.white,
                                         boxShadow: const [
                                           BoxShadow(
@@ -504,12 +525,60 @@ class _Home extends State<Home> {
                                                 Container(),
                                               ],
                                             ),
-                                            SizedBox(
-                                              height: MediaQuery.of(context)
-                                                      .size
-                                                      .height /
-                                                  100,
-                                            ),
+                                            Container(
+                                              child: Column(
+                                                children: [
+                                                  SizedBox(
+                                                    height:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .height /
+                                                            50,
+                                                  ),
+                                                  LinearPercentIndicator(
+                                                      lineHeight: 10,
+                                                      percent: 0.6,
+                                                      progressColor:
+                                                          Colors.indigo,
+                                                      backgroundColor: Colors
+                                                          .indigo.shade200,
+                                                      barRadius:
+                                                          Radius.circular(20)),
+                                                  SizedBox(
+                                                    height:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .height /
+                                                            35,
+                                                  ),
+                                                  LinearPercentIndicator(
+                                                      lineHeight: 10,
+                                                      percent: 0.2,
+                                                      progressColor:
+                                                          Colors.orange,
+                                                      backgroundColor: Colors
+                                                          .orange.shade200,
+                                                      barRadius:
+                                                          Radius.circular(20)),
+                                                  SizedBox(
+                                                    height:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .height /
+                                                            35,
+                                                  ),
+                                                  LinearPercentIndicator(
+                                                      lineHeight: 10,
+                                                      percent: 0.8,
+                                                      progressColor:
+                                                          Colors.indigo,
+                                                      backgroundColor: Colors
+                                                          .indigo.shade200,
+                                                      barRadius:
+                                                          Radius.circular(20)),
+                                                ],
+                                              ),
+                                            )
                                           ],
                                         ),
                                       ),
@@ -527,7 +596,7 @@ class _Home extends State<Home> {
                                           4.5,
                                       decoration: BoxDecoration(
                                         borderRadius:
-                                            BorderRadius.circular(40.0),
+                                            BorderRadius.circular(20.0),
                                         color: Colors.white,
                                         boxShadow: const [
                                           BoxShadow(
@@ -587,6 +656,33 @@ class _Home extends State<Home> {
                                                 Container(),
                                               ],
                                             ),
+                                            SizedBox(
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height /
+                                                  35,
+                                            ),
+                                            Container(
+                                              child: CircularPercentIndicator(
+                                                radius: 100,
+                                                lineWidth: 20,
+                                                percent: 0.75,
+                                                progressColor: Colors.indigo,
+                                                backgroundColor:
+                                                    Colors.indigo.shade200,
+                                                circularStrokeCap:
+                                                    CircularStrokeCap.round,
+                                                center: Text(
+                                                  "75%",
+                                                  style: TextStyle(
+                                                      color: Colors
+                                                          .indigo.shade200,
+                                                      fontSize: 50,
+                                                      fontWeight:
+                                                          FontWeight.w400),
+                                                ),
+                                              ),
+                                            )
                                           ],
                                         ),
                                       ),
@@ -610,7 +706,7 @@ class _Home extends State<Home> {
                                 height: MediaQuery.of(context).size.height / 4,
                                 width: MediaQuery.of(context).size.width / 3.25,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(40.0),
+                                  borderRadius: BorderRadius.circular(20.0),
                                   color: Colors.white,
                                   boxShadow: const [
                                     BoxShadow(
@@ -628,7 +724,7 @@ class _Home extends State<Home> {
                                 height: MediaQuery.of(context).size.height / 4,
                                 width: MediaQuery.of(context).size.width / 3,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(40.0),
+                                  borderRadius: BorderRadius.circular(20.0),
                                   color: Colors.white,
                                   boxShadow: const [
                                     BoxShadow(
@@ -691,7 +787,7 @@ class _Home extends State<Home> {
                           height: MediaQuery.of(context).size.height / 13,
                           width: MediaQuery.of(context).size.width / 4.5,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40.0),
+                            borderRadius: BorderRadius.circular(20.0),
                             color: Colors.white,
                             boxShadow: const [
                               BoxShadow(
@@ -747,7 +843,7 @@ class _Home extends State<Home> {
                           height: MediaQuery.of(context).size.height / 3,
                           width: MediaQuery.of(context).size.width / 4.5,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40.0),
+                            borderRadius: BorderRadius.circular(20.0),
                             color: Colors.white,
                             boxShadow: const [
                               BoxShadow(
@@ -798,6 +894,11 @@ class _Home extends State<Home> {
                                     Container(),
                                   ],
                                 ),
+                                SizedBox(
+                                  height:
+                                      MediaQuery.of(context).size.height / 50,
+                                ),
+                                ScatterChartSample1()
                               ],
                             ),
                           ),
@@ -809,7 +910,7 @@ class _Home extends State<Home> {
                           height: MediaQuery.of(context).size.height / 9,
                           width: MediaQuery.of(context).size.width / 4.5,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40.0),
+                            borderRadius: BorderRadius.circular(20.0),
                             color: Colors.white,
                             boxShadow: const [
                               BoxShadow(
@@ -843,7 +944,24 @@ class _Home extends State<Home> {
                                   ],
                                 ),
                               ),
-                              Container(),
+                              Container(
+                                child: Column(
+                                  children: [
+                                    SizedBox(
+                                      height:
+                                          MediaQuery.of(context).size.height /
+                                              50,
+                                    ),
+                                    LinearPercentIndicator(
+                                      lineHeight: 10,
+                                      percent: 0.3,
+                                      progressColor: Colors.indigo,
+                                      backgroundColor: Colors.indigo.shade200,
+                                      barRadius: Radius.circular(20),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -854,7 +972,7 @@ class _Home extends State<Home> {
                           height: MediaQuery.of(context).size.height / 3.3,
                           width: MediaQuery.of(context).size.width / 4.5,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40.0),
+                            borderRadius: BorderRadius.circular(20.0),
                             color: Colors.white,
                             boxShadow: const [
                               BoxShadow(
@@ -892,7 +1010,7 @@ class _Home extends State<Home> {
                                           15,
                                       decoration: BoxDecoration(
                                         borderRadius:
-                                            BorderRadius.circular(40.0),
+                                            BorderRadius.circular(20.0),
                                         border: Border.all(
                                           width: 2,
                                           color: Colors.indigo.shade200,
