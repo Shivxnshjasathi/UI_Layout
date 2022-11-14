@@ -4,6 +4,7 @@ import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:ui/pie.dart';
 
 import 'bar.dart';
+import 'calander.dart';
 import 'curve.dart';
 import 'line.dart';
 import 'new.dart';
@@ -354,7 +355,37 @@ class _Home extends State<Home> {
                                                   ),
                                                 ],
                                               ),
-                                              child: Container())
+                                              child: Column(
+                                                children: [
+                                                  SizedBox(
+                                                    height:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .height /
+                                                            50,
+                                                  ),
+                                                  Container(
+                                                    height:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .height /
+                                                            3.5,
+                                                    width:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .width /
+                                                            5,
+                                                    decoration: BoxDecoration(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              20.0),
+                                                      color: Colors.white,
+                                                    ),
+                                                    child: Calendar(),
+                                                  ),
+                                                  Container()
+                                                ],
+                                              ))
                                         ],
                                       ),
                                     ),
@@ -544,7 +575,8 @@ class _Home extends State<Home> {
                                                       backgroundColor: Colors
                                                           .indigo.shade200,
                                                       barRadius:
-                                                          const Radius.circular(20)),
+                                                          const Radius.circular(
+                                                              20)),
                                                   SizedBox(
                                                     height:
                                                         MediaQuery.of(context)
@@ -560,7 +592,8 @@ class _Home extends State<Home> {
                                                       backgroundColor: Colors
                                                           .orange.shade200,
                                                       barRadius:
-                                                          const Radius.circular(20)),
+                                                          const Radius.circular(
+                                                              20)),
                                                   SizedBox(
                                                     height:
                                                         MediaQuery.of(context)
@@ -576,7 +609,8 @@ class _Home extends State<Home> {
                                                       backgroundColor: Colors
                                                           .indigo.shade200,
                                                       barRadius:
-                                                          const Radius.circular(20)),
+                                                          const Radius.circular(
+                                                              20)),
                                                 ],
                                               ),
                                             )
@@ -663,8 +697,6 @@ class _Home extends State<Home> {
                                                       .height /
                                                   50,
                                             ),
-
-
                                             Container(
                                               child: CircularPercentIndicator(
                                                 radius: 70,
@@ -685,42 +717,44 @@ class _Home extends State<Home> {
                                                           FontWeight.w400),
                                                 ),
                                               ),
-
                                             ),
                                             SizedBox(
                                               height: MediaQuery.of(context)
-                                                  .size
-                                                  .height /
+                                                      .size
+                                                      .height /
                                                   75,
                                             ),
                                             Text(
                                               "Duis autem vel eum iriure",
                                               style: TextStyle(
-                                                  color: Colors
-                                                      .indigo.shade200,
+                                                  color: Colors.indigo.shade200,
                                                   fontSize: 15,
-                                                  fontWeight:
-                                                  FontWeight.w200),
+                                                  fontWeight: FontWeight.w200),
                                             ),
-
                                             SizedBox(
                                               height: MediaQuery.of(context)
-                                                  .size
-                                                  .height /
+                                                      .size
+                                                      .height /
                                                   75,
                                             ),
                                             Container(
-                                              height:
-                                              MediaQuery.of(context).size.height / 20,
-                                              width:
-                                              MediaQuery.of(context).size.width / 10,
+                                              height: MediaQuery.of(context)
+                                                      .size
+                                                      .height /
+                                                  20,
+                                              width: MediaQuery.of(context)
+                                                      .size
+                                                      .width /
+                                                  10,
                                               decoration: BoxDecoration(
-                                                borderRadius: BorderRadius.circular(40.0),
+                                                borderRadius:
+                                                    BorderRadius.circular(40.0),
                                                 color: Colors.indigo,
                                                 boxShadow: const [
                                                   BoxShadow(
                                                     color: Colors.grey,
-                                                    offset: Offset(0.0, 1.0), //(x,y)
+                                                    offset: Offset(
+                                                        0.0, 1.0), //(x,y)
                                                     blurRadius: 6.0,
                                                   ),
                                                 ],
@@ -729,11 +763,10 @@ class _Home extends State<Home> {
                                                 child: Text(
                                                   "Subcipit",
                                                   style: TextStyle(
-                                                      color: Colors
-                                                          .white,
+                                                      color: Colors.white,
                                                       fontSize: 15,
                                                       fontWeight:
-                                                      FontWeight.w200),
+                                                          FontWeight.w200),
                                                 ),
                                               ),
                                             ),
